@@ -12,9 +12,13 @@
 		76B0E1401DB7DF6800B6AD02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E13E1DB7DF6800B6AD02 /* Main.storyboard */; };
 		76B0E1421DB7DF6800B6AD02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E1411DB7DF6800B6AD02 /* Assets.xcassets */; };
 		76B0E1451DB7DF6800B6AD02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E1431DB7DF6800B6AD02 /* LaunchScreen.storyboard */; };
+		76B0E1511DB7DFE200B6AD02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E1501DB7DFE200B6AD02 /* GoogleService-Info.plist */; };
+		9167DFD5C508040E3BFAA976 /* Pods_eventure_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B397BE436E5EFA4A26FFCC6 /* Pods_eventure_app.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B1099E2D1CE25D6A0BED6C6 /* Pods-eventure-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventure-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-eventure-app/Pods-eventure-app.release.xcconfig"; sourceTree = "<group>"; };
+		5B397BE436E5EFA4A26FFCC6 /* Pods_eventure_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eventure_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B0E1371DB7DF6800B6AD02 /* eventure-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eventure-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B0E13A1DB7DF6800B6AD02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76B0E13C1DB7DF6800B6AD02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +26,8 @@
 		76B0E1411DB7DF6800B6AD02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76B0E1441DB7DF6800B6AD02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76B0E1461DB7DF6800B6AD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76B0E1501DB7DFE200B6AD02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C635F0D8890750993B317B73 /* Pods-eventure-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventure-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eventure-app/Pods-eventure-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9167DFD5C508040E3BFAA976 /* Pods_eventure_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +47,8 @@
 			children = (
 				76B0E1391DB7DF6800B6AD02 /* eventure-app */,
 				76B0E1381DB7DF6800B6AD02 /* Products */,
+				EEDE59D90E2D2F4F982E59D5 /* Pods */,
+				FF0C3595B4FFE51923DDDC44 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -59,9 +68,27 @@
 				76B0E13E1DB7DF6800B6AD02 /* Main.storyboard */,
 				76B0E1411DB7DF6800B6AD02 /* Assets.xcassets */,
 				76B0E1431DB7DF6800B6AD02 /* LaunchScreen.storyboard */,
+				76B0E1501DB7DFE200B6AD02 /* GoogleService-Info.plist */,
 				76B0E1461DB7DF6800B6AD02 /* Info.plist */,
 			);
 			path = "eventure-app";
+			sourceTree = "<group>";
+		};
+		EEDE59D90E2D2F4F982E59D5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C635F0D8890750993B317B73 /* Pods-eventure-app.debug.xcconfig */,
+				0B1099E2D1CE25D6A0BED6C6 /* Pods-eventure-app.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FF0C3595B4FFE51923DDDC44 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B397BE436E5EFA4A26FFCC6 /* Pods_eventure_app.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +98,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76B0E1491DB7DF6800B6AD02 /* Build configuration list for PBXNativeTarget "eventure-app" */;
 			buildPhases = (
+				6E954605EE8C38CAE760216D /* [CP] Check Pods Manifest.lock */,
 				76B0E1331DB7DF6800B6AD02 /* Sources */,
 				76B0E1341DB7DF6800B6AD02 /* Frameworks */,
 				76B0E1351DB7DF6800B6AD02 /* Resources */,
+				251619E30014A8DB20976476 /* [CP] Embed Pods Frameworks */,
+				983DA97F21F0E2C8B37944CA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +154,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B0E1451DB7DF6800B6AD02 /* LaunchScreen.storyboard in Resources */,
+				76B0E1511DB7DFE200B6AD02 /* GoogleService-Info.plist in Resources */,
 				76B0E1421DB7DF6800B6AD02 /* Assets.xcassets in Resources */,
 				76B0E1401DB7DF6800B6AD02 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		251619E30014A8DB20976476 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eventure-app/Pods-eventure-app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E954605EE8C38CAE760216D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		983DA97F21F0E2C8B37944CA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eventure-app/Pods-eventure-app-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		76B0E1331DB7DF6800B6AD02 /* Sources */ = {
@@ -256,6 +335,7 @@
 		};
 		76B0E14A1DB7DF6800B6AD02 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C635F0D8890750993B317B73 /* Pods-eventure-app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "eventure-app/Info.plist";
@@ -268,6 +348,7 @@
 		};
 		76B0E14B1DB7DF6800B6AD02 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B1099E2D1CE25D6A0BED6C6 /* Pods-eventure-app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "eventure-app/Info.plist";
@@ -297,6 +378,7 @@
 				76B0E14B1DB7DF6800B6AD02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
