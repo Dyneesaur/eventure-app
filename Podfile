@@ -7,5 +7,6 @@ target 'eventure-app' do
 
   # Pods for eventure-app
 	pod 'Firebase/Core'
-	pod ‘Firebase/Database’
+	pod 'Firebase/Database'
+	pod 'Firebase/Auth'
 end
