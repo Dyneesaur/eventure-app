@@ -16,8 +16,8 @@
 		76B0E1401DB7DF6800B6AD02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E13E1DB7DF6800B6AD02 /* Main.storyboard */; };
 		76B0E1421DB7DF6800B6AD02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E1411DB7DF6800B6AD02 /* Assets.xcassets */; };
 		76B0E1451DB7DF6800B6AD02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E1431DB7DF6800B6AD02 /* LaunchScreen.storyboard */; };
-		76B0E1511DB7DFE200B6AD02 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E1501DB7DFE200B6AD02 /* GoogleService-Info.plist */; };
 		9167DFD5C508040E3BFAA976 /* Pods_eventure_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B397BE436E5EFA4A26FFCC6 /* Pods_eventure_app.framework */; };
+		A78C327D1DB937650004286C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A78C327C1DB937650004286C /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,7 +34,7 @@
 		76B0E1411DB7DF6800B6AD02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76B0E1441DB7DF6800B6AD02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76B0E1461DB7DF6800B6AD02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		76B0E1501DB7DFE200B6AD02 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A78C327C1DB937650004286C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C635F0D8890750993B317B73 /* Pods-eventure-app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventure-app.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eventure-app/Pods-eventure-app.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,7 +96,7 @@
 				76B0E13E1DB7DF6800B6AD02 /* Main.storyboard */,
 				76B0E1411DB7DF6800B6AD02 /* Assets.xcassets */,
 				76B0E1431DB7DF6800B6AD02 /* LaunchScreen.storyboard */,
-				76B0E1501DB7DFE200B6AD02 /* GoogleService-Info.plist */,
+				A78C327C1DB937650004286C /* GoogleService-Info.plist */,
 				76B0E1461DB7DF6800B6AD02 /* Info.plist */,
 			);
 			path = "eventure-app";
@@ -182,7 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76B0E1451DB7DF6800B6AD02 /* LaunchScreen.storyboard in Resources */,
-				76B0E1511DB7DFE200B6AD02 /* GoogleService-Info.plist in Resources */,
+				A78C327D1DB937650004286C /* GoogleService-Info.plist in Resources */,
 				76B0E1421DB7DF6800B6AD02 /* Assets.xcassets in Resources */,
 				76B0E1401DB7DF6800B6AD02 /* Main.storyboard in Resources */,
 			);
