@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76829DE51DB80C7300138196 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76829DE41DB80C7300138196 /* Event.swift */; };
+		76829DE81DB8196700138196 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76829DE71DB8196700138196 /* User.swift */; };
+		76829DEA1DB819DA00138196 /* Chatroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76829DE91DB819DA00138196 /* Chatroom.swift */; };
+		76829DEC1DB81A3200138196 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76829DEB1DB81A3200138196 /* Message.swift */; };
 		76B0E13B1DB7DF6800B6AD02 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B0E13A1DB7DF6800B6AD02 /* AppDelegate.swift */; };
 		76B0E13D1DB7DF6800B6AD02 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B0E13C1DB7DF6800B6AD02 /* ViewController.swift */; };
 		76B0E1401DB7DF6800B6AD02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76B0E13E1DB7DF6800B6AD02 /* Main.storyboard */; };
@@ -19,6 +23,10 @@
 /* Begin PBXFileReference section */
 		0B1099E2D1CE25D6A0BED6C6 /* Pods-eventure-app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventure-app.release.xcconfig"; path = "Pods/Target Support Files/Pods-eventure-app/Pods-eventure-app.release.xcconfig"; sourceTree = "<group>"; };
 		5B397BE436E5EFA4A26FFCC6 /* Pods_eventure_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eventure_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76829DE41DB80C7300138196 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		76829DE71DB8196700138196 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		76829DE91DB819DA00138196 /* Chatroom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chatroom.swift; sourceTree = "<group>"; };
+		76829DEB1DB81A3200138196 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		76B0E1371DB7DF6800B6AD02 /* eventure-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eventure-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B0E13A1DB7DF6800B6AD02 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76B0E13C1DB7DF6800B6AD02 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +50,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76829DE31DB80C4A00138196 /* Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				76829DE41DB80C7300138196 /* Event.swift */,
+				76829DE71DB8196700138196 /* User.swift */,
+				76829DE91DB819DA00138196 /* Chatroom.swift */,
+				76829DEB1DB81A3200138196 /* Message.swift */,
+			);
+			name = "Data Classes";
+			sourceTree = "<group>";
+		};
+		76829DE61DB814F700138196 /* Utility Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Utility Classes";
+			sourceTree = "<group>";
+		};
 		76B0E12E1DB7DF6800B6AD02 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +89,8 @@
 		76B0E1391DB7DF6800B6AD02 /* eventure-app */ = {
 			isa = PBXGroup;
 			children = (
+				76829DE61DB814F700138196 /* Utility Classes */,
+				76829DE31DB80C4A00138196 /* Data Classes */,
 				76B0E13A1DB7DF6800B6AD02 /* AppDelegate.swift */,
 				76B0E13C1DB7DF6800B6AD02 /* ViewController.swift */,
 				76B0E13E1DB7DF6800B6AD02 /* Main.storyboard */,
@@ -215,7 +243,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76829DE81DB8196700138196 /* User.swift in Sources */,
+				76829DEA1DB819DA00138196 /* Chatroom.swift in Sources */,
 				76B0E13D1DB7DF6800B6AD02 /* ViewController.swift in Sources */,
+				76829DEC1DB81A3200138196 /* Message.swift in Sources */,
+				76829DE51DB80C7300138196 /* Event.swift in Sources */,
 				76B0E13B1DB7DF6800B6AD02 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

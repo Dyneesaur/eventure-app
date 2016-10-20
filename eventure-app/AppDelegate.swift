@@ -13,11 +13,19 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
+        
+        // reference to eventure database
+        var ref:FIRDatabaseReference!
+        ref = FIRDatabase.database().reference()
+        
+        // create data to be stored in database reference.
+        
+        
         return true
     }
 
