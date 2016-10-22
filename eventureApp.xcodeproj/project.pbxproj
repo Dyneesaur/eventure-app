@@ -12,6 +12,14 @@
 		76A083A51DBBF73B00DBC5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A083A31DBBF73B00DBC5A2 /* Main.storyboard */; };
 		76A083A71DBBF73B00DBC5A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 76A083A61DBBF73B00DBC5A2 /* Assets.xcassets */; };
 		76A083AA1DBBF73B00DBC5A2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A083A81DBBF73B00DBC5A2 /* LaunchScreen.storyboard */; };
+		76A083B31DBBF7E300DBC5A2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 76A083B21DBBF7E300DBC5A2 /* GoogleService-Info.plist */; };
+		76A083B71DBBF9DC00DBC5A2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A083B61DBBF9DC00DBC5A2 /* Event.swift */; };
+		76A083B91DBBF9E200DBC5A2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A083B81DBBF9E200DBC5A2 /* User.swift */; };
+		76A083BB1DBBF9E700DBC5A2 /* Chatroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A083BA1DBBF9E700DBC5A2 /* Chatroom.swift */; };
+		76A083BD1DBBF9ED00DBC5A2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A083BC1DBBF9ED00DBC5A2 /* Message.swift */; };
+		76A083C01DBBFA0B00DBC5A2 /* river.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 76A083BF1DBBFA0B00DBC5A2 /* river.jpeg */; };
+		76A083C21DBC013700DBC5A2 /* LoggedInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A083C11DBC013700DBC5A2 /* LoggedInViewController.swift */; };
+		A7E6BD0BC443562A75605052 /* Pods_eventureApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFCB81741DB73DB7E88BF2A /* Pods_eventureApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,17 @@
 		76A083A61DBBF73B00DBC5A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		76A083A91DBBF73B00DBC5A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		76A083AB1DBBF73B00DBC5A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		76A083B11DBBF78C00DBC5A2 /* eventureApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = eventureApp.entitlements; sourceTree = "<group>"; };
+		76A083B21DBBF7E300DBC5A2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		76A083B61DBBF9DC00DBC5A2 /* Event.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		76A083B81DBBF9E200DBC5A2 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		76A083BA1DBBF9E700DBC5A2 /* Chatroom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chatroom.swift; sourceTree = "<group>"; };
+		76A083BC1DBBF9ED00DBC5A2 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		76A083BF1DBBFA0B00DBC5A2 /* river.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = river.jpeg; sourceTree = "<group>"; };
+		76A083C11DBC013700DBC5A2 /* LoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
+		AB149FF1214CD90EBC2AFCA5 /* Pods-eventureApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventureApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-eventureApp/Pods-eventureApp.release.xcconfig"; sourceTree = "<group>"; };
+		AFFCB81741DB73DB7E88BF2A /* Pods_eventureApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eventureApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F18A7FAFEA7F036E386AFFC7 /* Pods-eventureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventureApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eventureApp/Pods-eventureApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +48,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7E6BD0BC443562A75605052 /* Pods_eventureApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		456A253AEC7C10E4DC50E316 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFFCB81741DB73DB7E88BF2A /* Pods_eventureApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		76A083931DBBF73A00DBC5A2 = {
 			isa = PBXGroup;
 			children = (
 				76A0839E1DBBF73B00DBC5A2 /* eventureApp */,
 				76A0839D1DBBF73B00DBC5A2 /* Products */,
+				E205764F24D2A8D05B1DBF55 /* Pods */,
+				456A253AEC7C10E4DC50E316 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +84,55 @@
 		76A0839E1DBBF73B00DBC5A2 /* eventureApp */ = {
 			isa = PBXGroup;
 			children = (
+				76A083BE1DBBFA0400DBC5A2 /* Images */,
+				76A083B51DBBF9D000DBC5A2 /* Data Classes */,
+				76A083B41DBBF9C700DBC5A2 /* Utility Classes */,
+				76A083B11DBBF78C00DBC5A2 /* eventureApp.entitlements */,
 				76A0839F1DBBF73B00DBC5A2 /* AppDelegate.swift */,
 				76A083A11DBBF73B00DBC5A2 /* ViewController.swift */,
+				76A083C11DBC013700DBC5A2 /* LoggedInViewController.swift */,
 				76A083A31DBBF73B00DBC5A2 /* Main.storyboard */,
 				76A083A61DBBF73B00DBC5A2 /* Assets.xcassets */,
 				76A083A81DBBF73B00DBC5A2 /* LaunchScreen.storyboard */,
+				76A083B21DBBF7E300DBC5A2 /* GoogleService-Info.plist */,
 				76A083AB1DBBF73B00DBC5A2 /* Info.plist */,
 			);
 			path = eventureApp;
+			sourceTree = "<group>";
+		};
+		76A083B41DBBF9C700DBC5A2 /* Utility Classes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Utility Classes";
+			sourceTree = "<group>";
+		};
+		76A083B51DBBF9D000DBC5A2 /* Data Classes */ = {
+			isa = PBXGroup;
+			children = (
+				76A083B61DBBF9DC00DBC5A2 /* Event.swift */,
+				76A083B81DBBF9E200DBC5A2 /* User.swift */,
+				76A083BA1DBBF9E700DBC5A2 /* Chatroom.swift */,
+				76A083BC1DBBF9ED00DBC5A2 /* Message.swift */,
+			);
+			name = "Data Classes";
+			sourceTree = "<group>";
+		};
+		76A083BE1DBBFA0400DBC5A2 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				76A083BF1DBBFA0B00DBC5A2 /* river.jpeg */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		E205764F24D2A8D05B1DBF55 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F18A7FAFEA7F036E386AFFC7 /* Pods-eventureApp.debug.xcconfig */,
+				AB149FF1214CD90EBC2AFCA5 /* Pods-eventureApp.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +142,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 76A083AE1DBBF73B00DBC5A2 /* Build configuration list for PBXNativeTarget "eventureApp" */;
 			buildPhases = (
+				959DD697E1419D257CEE92BE /* [CP] Check Pods Manifest.lock */,
 				76A083981DBBF73A00DBC5A2 /* Sources */,
 				76A083991DBBF73A00DBC5A2 /* Frameworks */,
 				76A0839A1DBBF73A00DBC5A2 /* Resources */,
+				04E12A4DA6F9BB5E54A339FB /* [CP] Embed Pods Frameworks */,
+				A42A84FFE6A2081B96D69952 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,7 +170,13 @@
 				TargetAttributes = {
 					76A0839B1DBBF73A00DBC5A2 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = R5857M4T79;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -123,20 +203,75 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A083B31DBBF7E300DBC5A2 /* GoogleService-Info.plist in Resources */,
 				76A083AA1DBBF73B00DBC5A2 /* LaunchScreen.storyboard in Resources */,
 				76A083A71DBBF73B00DBC5A2 /* Assets.xcassets in Resources */,
+				76A083C01DBBFA0B00DBC5A2 /* river.jpeg in Resources */,
 				76A083A51DBBF73B00DBC5A2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04E12A4DA6F9BB5E54A339FB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eventureApp/Pods-eventureApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		959DD697E1419D257CEE92BE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A42A84FFE6A2081B96D69952 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-eventureApp/Pods-eventureApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		76A083981DBBF73A00DBC5A2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76A083B91DBBF9E200DBC5A2 /* User.swift in Sources */,
+				76A083BB1DBBF9E700DBC5A2 /* Chatroom.swift in Sources */,
 				76A083A21DBBF73B00DBC5A2 /* ViewController.swift in Sources */,
+				76A083BD1DBBF9ED00DBC5A2 /* Message.swift in Sources */,
+				76A083B71DBBF9DC00DBC5A2 /* Event.swift in Sources */,
+				76A083C21DBC013700DBC5A2 /* LoggedInViewController.swift in Sources */,
 				76A083A01DBBF73B00DBC5A2 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -256,11 +391,14 @@
 		};
 		76A083AF1DBBF73B00DBC5A2 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F18A7FAFEA7F036E386AFFC7 /* Pods-eventureApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = eventureApp/eventureApp.entitlements;
+				DEVELOPMENT_TEAM = R5857M4T79;
 				INFOPLIST_FILE = eventureApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eventure-app.com.eventureApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eventure-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -268,11 +406,14 @@
 		};
 		76A083B01DBBF73B00DBC5A2 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB149FF1214CD90EBC2AFCA5 /* Pods-eventureApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = eventureApp/eventureApp.entitlements;
+				DEVELOPMENT_TEAM = R5857M4T79;
 				INFOPLIST_FILE = eventureApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eventure-app.com.eventureApp";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eventure-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -297,6 +438,7 @@
 				76A083B01DBBF73B00DBC5A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
