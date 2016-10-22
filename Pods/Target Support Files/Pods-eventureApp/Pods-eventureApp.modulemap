@@ -1,0 +1,6 @@
+framework module Pods_eventureApp {
+  umbrella header "Pods-eventureApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
