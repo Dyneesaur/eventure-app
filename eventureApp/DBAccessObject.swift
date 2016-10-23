@@ -34,6 +34,8 @@ class DBAccessObject {
     
     // functions to add data to our database tree
     
+    
+    // adds an event to the db
     func addEventTreeStructure(eventRoot: String, event: String, title: String, description: String, avatar: String, Category: String, chatChannel: Int, images: NSMutableArray, dateCreated: String) {
         
         // sets the title
@@ -57,9 +59,7 @@ class DBAccessObject {
     }
    
     
-    
-    
-    
+   
     
     
     

@@ -8,9 +8,33 @@
 
 import UIKit
 import FirebaseDatabase
+import FirebaseAuth
+
 
 class DBViewController: UIViewController {
 
+    @IBOutlet weak var category: UILabel!
+    
+    @IBOutlet weak var chatChannel: UILabel!
+    
+    @IBOutlet var dbData: UIView!
+    
+    
+    @IBOutlet weak var titleData: UILabel!
+    
+    @IBOutlet weak var descriptionData: UILabel!
+    
+    
+    @IBOutlet weak var eventNumber: UILabel!
+    
+    
+    @IBOutlet weak var image: UILabel!
+    
+    
+    @IBOutlet weak var dateCreated: UILabel!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -28,20 +52,45 @@ class DBViewController: UIViewController {
         
         // add Event Tree structure to DB
         
-        db.addEventTreeStructure(eventRoot: "Events", event: "eventOne", title: "Skate", description: "Skating in central park", avatar: "http://assets.fodors.com/destinations/1128/central-park-manhattan-new-york-city-new-york-usa_main.jpg", Category: "Recreational", chatChannel: 1, images: ["https://upload.wikimedia.org/wikipedia/commons/d/d9/Lower_Central_Park_Shot_5.JPG","https://upload.wikimedia.org/wikipedia/commons/0/05/Southwest_corner_of_Central_Park,_looking_east,_NYC.jpg","http://cpc.convio.net/images/fall-2015/conservatory-water.jpg"], dateCreated: "2016-10-22")
+        // seeds the db with data.
+        //db.addEventTreeStructure(eventRoot: "Events", event: "eventOne", title: "Skate", description: "Skating in central park", avatar: "http://assets.fodors.com/destinations/1128/central-park-manhattan-new-york-city-new-york-usa_main.jpg", Category: "Recreational", chatChannel: 1, images: ["https://upload.wikimedia.org/wikipedia/commons/d/d9/Lower_Central_Park_Shot_5.JPG","https://upload.wikimedia.org/wikipedia/commons/0/05/Southwest_corner_of_Central_Park,_looking_east,_NYC.jpg","http://cpc.convio.net/images/fall-2015/conservatory-water.jpg"], dateCreated: "2016-10-22")
+        
+        
         
         
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func showDataTapped(_ sender: AnyObject) {
+        
+        
+        
+        
     }
-    */
+    
+    
+    @IBAction func logout(_ sender: AnyObject) {
+        
+        
+        // log the currently signed in user out.
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if let user = user {
+                // User is signed in.
+                // try to log user out
+                do {
+                    try FIRAuth.auth()?.signOut()
+                }
+                catch {
+                    print("Error while signing out")
+                }
+                
+            } else {
+                // No user is signed in.
+            }
+        }
+        
+    }
+    
+    
 
 }
