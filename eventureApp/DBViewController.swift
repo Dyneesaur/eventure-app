@@ -66,6 +66,12 @@ class DBViewController: UIViewController {
         let ref: FIRDatabaseReference = FIRDatabase.database().reference()
         
         
+        /* 
+            these can definitely be made into a function so we don't have to retype the same code
+            for the purpose of just showing data from the db I typed them all out separately.
+         
+         */
+        
         let titleRef = ref.child("Events").child("eventOne").child("title")
         titleRef.observe(FIRDataEventType.value, with: {(snapshot) in
             self.titleData.text = snapshot.value as! String
@@ -93,7 +99,15 @@ class DBViewController: UIViewController {
         
         let imgRef = ref.child("Events").child("eventOne").child("avatar")
         imgRef.observe(FIRDataEventType.value, with: {(snapshot) in
-            self.image.text = snapshot.value as! String
+
+            let imgURL = NSURL(string: snapshot.value as! String)
+            let imgData = NSData(contentsOf: imgURL as! URL)
+            let img = UIImage(data: imgData as! Data)
+            let imgView = UIImageView(image: img)
+            
+            // give the img a frame
+            imgView.frame = CGRect(x: 140, y: 420, width: 100, height: 100)
+            self.view.addSubview(imgView)
         })
         
     
