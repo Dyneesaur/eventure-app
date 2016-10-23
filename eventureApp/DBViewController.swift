@@ -63,9 +63,40 @@ class DBViewController: UIViewController {
     
     @IBAction func showDataTapped(_ sender: AnyObject) {
         
+        let ref: FIRDatabaseReference = FIRDatabase.database().reference()
         
         
+        let titleRef = ref.child("Events").child("eventOne").child("title")
+        titleRef.observe(FIRDataEventType.value, with: {(snapshot) in
+            self.titleData.text = snapshot.value as! String
+        })
         
+        let catRef = ref.child("Events").child("eventOne").child("category")
+        catRef.observe(FIRDataEventType.value, with: {(snapshot) in
+            self.category.text = snapshot.value as! String
+        })
+        
+        let descRef = ref.child("Events").child("eventOne").child("description")
+        descRef.observe(FIRDataEventType.value, with: {(snapshot) in
+            self.descriptionData.text = snapshot.value as! String
+        })
+        
+        let chanRef = ref.child("Events").child("eventOne").child("chatChannel")
+        chanRef.observe(FIRDataEventType.value, with: {(snapshot) in
+            self.chatChannel.text = String(describing: snapshot.value)
+        })
+        
+        let dateCreateRef = ref.child("Events").child("eventOne").child("dateCreated")
+        dateCreateRef.observe(FIRDataEventType.value, with: {(snapshot) in
+            self.dateCreated.text = snapshot.value as! String
+        })
+        
+        let imgRef = ref.child("Events").child("eventOne").child("avatar")
+        imgRef.observe(FIRDataEventType.value, with: {(snapshot) in
+            self.image.text = snapshot.value as! String
+        })
+        
+    
     }
     
     
