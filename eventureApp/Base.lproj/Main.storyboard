@@ -100,6 +100,11 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" id="aSJ-sh-E0e"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="View DB" id="vPJ-3z-opz">
+                                            <connections>
+                                                <segue destination="hF2-eT-mQk" kind="show" id="Hno-l2-XBE"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -121,11 +126,52 @@
             </objects>
             <point key="canvasLocation" x="837.60000000000002" y="138.98050974512745"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="ZAw-V5-u4W">
+            <objects>
+                <viewController id="hF2-eT-mQk" customClass="DBViewController" customModule="eventureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fDh-FF-kfx"/>
+                        <viewControllerLayoutGuide type="bottom" id="WdT-Vj-N1B"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U0K-82-TEz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Database Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbq-NY-vIp">
+                                <frame key="frameInset" minX="16" minY="111" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-hm-fm1">
+                                <frame key="frameInset" minY="20" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Navigation Bar" id="upE-wp-ZWO">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="CzU-Po-0zv"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Back" id="RM1-J4-O5K">
+                                            <connections>
+                                                <segue destination="4I8-F1-WhK" kind="show" id="Ne2-Eo-Qme"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e33-f4-3nb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541.5999999999999" y="138.98050974512745"/>
+        </scene>
     </scenes>
     <resources>
         <image name="river.jpeg" width="5472" height="3648"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="WSh-dx-0Af"/>
+        <segue reference="Ne2-Eo-Qme"/>
     </inferredMetricsTieBreakers>
 </document>
