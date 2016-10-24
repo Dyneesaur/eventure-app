@@ -20,12 +20,12 @@ class Event {
     let event_id: String
     var avatar_img: String
     let channelNum: Int
-    var start_date: NSDate
+    var start_date: NSDate        
     var end_date: NSDate
     var icon_img: String
     var event_images: NSMutableArray
     var event_category: String
-    let host_id: String
+    let host_id: String  // this will be firstbase uid
     var title_text: String
     
     // define an initializer for Event objects

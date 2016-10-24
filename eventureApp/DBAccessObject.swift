@@ -7,7 +7,8 @@
 //
 
 import FirebaseDatabase
-
+import Firebase
+import FirebaseAuth
 
 /*
  /
@@ -36,28 +37,40 @@ class DBAccessObject {
     
     
     // adds an event to the db
-    func addEventTreeStructure(eventRoot: String, event: String, title: String, description: String, avatar: String, Category: String, chatChannel: Int, images: NSMutableArray, dateCreated: String) {
+    func addEventTreeStructure(eventRoot: String, title: String, description: String, avatar: String, Category: String, chatChannel: Int, images: NSMutableArray, dateCreated: String) {
         
-        // sets the title
-        DBReference.child(eventRoot).child(event).child("title").setValue(title)
         
-        DBReference.child(eventRoot).child(event).child("description").setValue(description)
         
-        DBReference.child(eventRoot).child(event).child("avatar").setValue(avatar)
+       let eventKey = DBReference.child(eventRoot).childByAutoId()
         
-        DBReference.child(eventRoot).child(event).child("category").setValue(Category)
         
-        DBReference.child(eventRoot).child(event).child("chatChannel").setValue(chatChannel)
         
-        DBReference.child(eventRoot).child(event).child("images").setValue(images)
         
-        DBReference.child(eventRoot).child(event).child("dateCreated").setValue(dateCreated)
         
-        DBReference.child(eventRoot).child(event).child("eventID").childByAutoId()
+        eventKey.child("title").setValue(title)
+        
+        eventKey.child("description").setValue(description)
+        
+        eventKey.child("avatar").setValue(avatar)
+        
+        eventKey.child("category").setValue(Category)
+        
+        eventKey.child("chatChannel").setValue(chatChannel)
+        
+        eventKey.child("images").setValue(images)
+        
+        eventKey.child("dateCreated").setValue(dateCreated)
+        
         
         
     }
    
+    
+//    func addUserTreeStructuer(eventRoot: String, email: String, firstName: String, lastName: String) {
+//    
+//        
+//    }
+    
     
    
     

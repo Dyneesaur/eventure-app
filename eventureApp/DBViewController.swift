@@ -53,8 +53,10 @@ class DBViewController: UIViewController {
         // add Event Tree structure to DB
         
         // seeds the db with data.
-        //db.addEventTreeStructure(eventRoot: "Events", event: "eventOne", title: "Skate", description: "Skating in central park", avatar: "http://assets.fodors.com/destinations/1128/central-park-manhattan-new-york-city-new-york-usa_main.jpg", Category: "Recreational", chatChannel: 1, images: ["https://upload.wikimedia.org/wikipedia/commons/d/d9/Lower_Central_Park_Shot_5.JPG","https://upload.wikimedia.org/wikipedia/commons/0/05/Southwest_corner_of_Central_Park,_looking_east,_NYC.jpg","http://cpc.convio.net/images/fall-2015/conservatory-water.jpg"], dateCreated: "2016-10-22")
+        //db.addEventTreeStructure(eventRoot: "Events",  title: "Skate", description: "Skating in central park", avatar: "http://assets.fodors.com/destinations/1128/central-park-manhattan-new-york-city-new-york-usa_main.jpg", Category: "Recreational", chatChannel: 1, images: ["https://upload.wikimedia.org/wikipedia/commons/d/d9/Lower_Central_Park_Shot_5.JPG","https://upload.wikimedia.org/wikipedia/commons/0/05/Southwest_corner_of_Central_Park,_looking_east,_NYC.jpg","http://cpc.convio.net/images/fall-2015/conservatory-water.jpg"], dateCreated: "2016-10-22")
         
+        
+        //db.addEventTreeStructure(eventRoot: "Events",  title: "Walking", description: "Walking in central park", avatar: "http://assets.fodors.com/destinations/1128/central-park-manhattan-new-york-city-new-york-usa_main.jpg", Category: "Recreational", chatChannel: 2, images: ["https://upload.wikimedia.org/wikipedia/commons/d/d9/Lower_Central_Park_Shot_5.JPG","https://upload.wikimedia.org/wikipedia/commons/0/05/Southwest_corner_of_Central_Park,_looking_east,_NYC.jpg","http://cpc.convio.net/images/fall-2015/conservatory-water.jpg"], dateCreated: "2016-10-22")
         
         
         
@@ -72,35 +74,19 @@ class DBViewController: UIViewController {
          
          */
         
-        let titleRef = ref.child("Events").child("eventOne").child("title")
-        titleRef.observe(FIRDataEventType.value, with: {(snapshot) in
-            self.titleData.text = snapshot.value as! String
-        })
         
-        let catRef = ref.child("Events").child("eventOne").child("category")
-        catRef.observe(FIRDataEventType.value, with: {(snapshot) in
-            self.category.text = snapshot.value as! String
-        })
         
-        let descRef = ref.child("Events").child("eventOne").child("description")
-        descRef.observe(FIRDataEventType.value, with: {(snapshot) in
-            self.descriptionData.text = snapshot.value as! String
-        })
+        let eventRef = ref.child("Events")
         
-        let chanRef = ref.child("Events").child("eventOne").child("chatChannel")
-        chanRef.observe(FIRDataEventType.value, with: {(snapshot) in
-            self.chatChannel.text = String(describing: snapshot.value)
-        })
-        
-        let dateCreateRef = ref.child("Events").child("eventOne").child("dateCreated")
-        dateCreateRef.observe(FIRDataEventType.value, with: {(snapshot) in
-            self.dateCreated.text = snapshot.value as! String
-        })
-        
-        let imgRef = ref.child("Events").child("eventOne").child("avatar")
-        imgRef.observe(FIRDataEventType.value, with: {(snapshot) in
-
-            let imgURL = NSURL(string: snapshot.value as! String)
+        eventRef.observeSingleEvent(of: .value, with: {snapshot in
+            guard let data = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            
+            let swiftArray = Array(data.values)
+            
+            
+            let imgURL = NSURL(string: swiftArray[0]["avatar"] as! String)
             let imgData = NSData(contentsOf: imgURL as! URL)
             let img = UIImage(data: imgData as! Data)
             let imgView = UIImageView(image: img)
@@ -108,9 +94,97 @@ class DBViewController: UIViewController {
             // give the img a frame
             imgView.frame = CGRect(x: 140, y: 420, width: 100, height: 100)
             self.view.addSubview(imgView)
+            
+            var stupidfuckinginteger = swiftArray[0]["chatChannel"]!
+            var stupidfuckingstring = String(describing: stupidfuckinginteger!)
+            
+            
+            let titleRef = ref.child("Events").child("title")
+            titleRef.observe(FIRDataEventType.value, with: {(snapshot) in
+                self.titleData.text = swiftArray[0]["title"] as! String
+            })
+            
+            let catRef = ref.child("Events").child("category")
+            catRef.observe(FIRDataEventType.value, with: {(snapshot) in
+                self.category.text = swiftArray[0]["category"] as! String
+            })
+            
+            let descRef = ref.child("Events").child("description")
+            descRef.observe(FIRDataEventType.value, with: {(snapshot) in
+                self.descriptionData.text = swiftArray[0]["description"] as! String
+            })
+            
+            let chanRef = ref.child("Events").child("chatChannel")
+            chanRef.observe(FIRDataEventType.value, with: {(snapshot) in
+                self.chatChannel.text = stupidfuckingstring
+            })
+            
+            let dateCreateRef = ref.child("Events").child("dateCreated")
+            dateCreateRef.observe(FIRDataEventType.value, with: {(snapshot) in
+                self.dateCreated.text = swiftArray[0]["dateCreated"] as! String
+            })
+            
+            
         })
         
-    
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+//        
+//        
+//
+//        
+//        let titleRef = ref.child("Events").child("title")
+//        titleRef.observe(FIRDataEventType.value, with: {(snapshot) in
+//            self.titleData.text = snapshot.value as! String
+//        })
+//        
+//        let catRef = ref.child("Events").child("category")
+//        catRef.observe(FIRDataEventType.value, with: {(snapshot) in
+//            self.category.text = snapshot.value as! String
+//        })
+//        
+//        let descRef = ref.child("Events").child("description")
+//        descRef.observe(FIRDataEventType.value, with: {(snapshot) in
+//            self.descriptionData.text = snapshot.value as! String
+//        })
+//        
+//        let chanRef = ref.child("Events").child("chatChannel")
+//        chanRef.observe(FIRDataEventType.value, with: {(snapshot) in
+//            self.chatChannel.text = String(describing: snapshot.value)
+//        })
+//        
+//        let dateCreateRef = ref.child("Events").child("dateCreated")
+//        dateCreateRef.observe(FIRDataEventType.value, with: {(snapshot) in
+//            self.dateCreated.text = snapshot.value as! String
+//        })
+//        
+//        let imgRef = ref.child("Events").child("avatar")
+//        imgRef.observe(FIRDataEventType.value, with: {(snapshot) in
+//
+//            let imgURL = NSURL(string: snapshot.value as! String)
+//            let imgData = NSData(contentsOf: imgURL as! URL)
+//            let img = UIImage(data: imgData as! Data)
+//            let imgView = UIImageView(image: img)
+//            
+//            // give the img a frame
+//            imgView.frame = CGRect(x: 140, y: 420, width: 100, height: 100)
+//            self.view.addSubview(imgView)
+//        })
+//        
+//    
     }
     
     

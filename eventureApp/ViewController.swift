@@ -45,8 +45,13 @@ class ViewController: UIViewController {
         
     }
     
+    // add to database
+    var ref: FIRDatabaseReference = FIRDatabase.database().reference()
+    
     
     @IBAction func register(_ sender: AnyObject) {
+        
+        
         
         // create a user with email and password fields
         FIRAuth.auth()?.createUser(withEmail: email.text!, password: password.text! ) {
@@ -62,6 +67,23 @@ class ViewController: UIViewController {
             self.password.text = ""
             
             
+            // get current user that just registered
+            FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+                if let user = user {
+                    // User is signed in.
+                    // try to log user out
+                    let userID = user.uid
+                    let userKey = self.ref.child("Users").child(userID)
+                    userKey.child("email").setValue(user.email)
+                    
+                }
+                
+                // redirect to the fucking profile page gg ez.
+                
+            }
+            
+           
+           
         }
         
     }
