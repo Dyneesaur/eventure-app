@@ -31,53 +31,17 @@ class DBAccessObject {
         
     }
     
-    
-    
-    // functions to add data to our database tree
-    
-    
     // adds an event to the db
     func addEventTreeStructure(eventRoot: String, title: String, description: String, avatar: String, Category: String, chatChannel: Int, images: NSMutableArray, dateCreated: String) {
         
-        
-        
-       let eventKey = DBReference.child(eventRoot).childByAutoId()
-        
-        
-        
-        
-        
+        let eventKey = DBReference.child(eventRoot).childByAutoId()
         eventKey.child("title").setValue(title)
-        
         eventKey.child("description").setValue(description)
-        
         eventKey.child("avatar").setValue(avatar)
-        
         eventKey.child("category").setValue(Category)
-        
         eventKey.child("chatChannel").setValue(chatChannel)
-        
         eventKey.child("images").setValue(images)
-        
         eventKey.child("dateCreated").setValue(dateCreated)
         
-        
-        
     }
-   
-    
-//    func addUserTreeStructuer(eventRoot: String, email: String, firstName: String, lastName: String) {
-//    
-//        
-//    }
-    
-    
-   
-    
-    
-    
-    
-    
-
-    
 }

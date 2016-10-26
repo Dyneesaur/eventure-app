@@ -77,6 +77,52 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
+        <!--Map View Controller-->
+        <scene sceneID="t2J-AX-0Cg">
+            <objects>
+                <viewController id="6Dd-sm-0vA" customClass="MapViewController" customModule="eventureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7gx-U9-OXe"/>
+                        <viewControllerLayoutGuide type="bottom" id="IHq-tp-wMH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ERj-N7-TL5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V6K-bf-ReZ">
+                                <frame key="frameInset" minY="20" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Enter Location" id="NAA-PF-rEe">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="1q6-6b-WwN">
+                                            <connections>
+                                                <segue destination="4I8-F1-WhK" kind="show" id="LAx-d9-Sa1"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Puc-9D-gkJ">
+                                <frame key="frameInset" minY="64" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="duA-q3-HLt" customClass="GMSMapView">
+                                <frame key="frameInset" minY="108" width="375" height="559"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="myMapView" destination="duA-q3-HLt" id="FyE-rp-3m4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9AT-WT-Fv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="156" y="926.98650674662679"/>
+        </scene>
         <!--Logged In View Controller-->
         <scene sceneID="iYm-YQ-XIr">
             <objects>
@@ -115,6 +161,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adF-TR-pmP">
+                                <frame key="frameInset" minX="151" minY="518" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Show Map"/>
+                                <connections>
+                                    <segue destination="6Dd-sm-0vA" kind="show" id="RdA-G7-Ejy"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -236,7 +290,7 @@
         <image name="river.jpeg" width="5472" height="3648"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ne2-Eo-Qme"/>
-        <segue reference="NLZ-92-0MH"/>
+        <segue reference="aSJ-sh-E0e"/>
+        <segue reference="LAx-d9-Sa1"/>
     </inferredMetricsTieBreakers>
 </document>

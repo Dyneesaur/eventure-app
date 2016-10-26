@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7646BFBA1DC0570000CB7CF8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7646BFB91DC0570000CB7CF8 /* MapViewController.swift */; };
 		76A083A01DBBF73B00DBC5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0839F1DBBF73B00DBC5A2 /* AppDelegate.swift */; };
 		76A083A21DBBF73B00DBC5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A083A11DBBF73B00DBC5A2 /* ViewController.swift */; };
 		76A083A51DBBF73B00DBC5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A083A31DBBF73B00DBC5A2 /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7646BFB91DC0570000CB7CF8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		76A0839C1DBBF73B00DBC5A2 /* eventureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eventureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A0839F1DBBF73B00DBC5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76A083A11DBBF73B00DBC5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				76A083A81DBBF73B00DBC5A2 /* LaunchScreen.storyboard */,
 				76A083B21DBBF7E300DBC5A2 /* GoogleService-Info.plist */,
 				76A083AB1DBBF73B00DBC5A2 /* Info.plist */,
+				7646BFB91DC0570000CB7CF8 /* MapViewController.swift */,
 			);
 			path = eventureApp;
 			sourceTree = "<group>";
@@ -275,6 +278,7 @@
 				76A083B91DBBF9E200DBC5A2 /* User.swift in Sources */,
 				76A083BB1DBBF9E700DBC5A2 /* Chatroom.swift in Sources */,
 				76A083A21DBBF73B00DBC5A2 /* ViewController.swift in Sources */,
+				7646BFBA1DC0570000CB7CF8 /* MapViewController.swift in Sources */,
 				76A083BD1DBBF9ED00DBC5A2 /* Message.swift in Sources */,
 				76AA56C61DBC2B4A00EE90FF /* DBViewController.swift in Sources */,
 				76A083B71DBBF9DC00DBC5A2 /* Event.swift in Sources */,

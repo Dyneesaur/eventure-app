@@ -25,8 +25,15 @@ PODS:
   - FirebaseInstanceID (1.0.8)
   - GoogleInterchangeUtilities (1.2.2):
     - GoogleSymbolUtilities (~> 1.1)
+  - GoogleMaps (2.1.0):
+    - GoogleMaps/Maps (= 2.1.0)
+  - GoogleMaps/Base (2.1.0)
+  - GoogleMaps/Maps (2.1.0):
+    - GoogleMaps/Base (= 2.1.0)
   - GoogleNetworkingUtilities (1.2.2):
     - GoogleSymbolUtilities (~> 1.1)
+  - GooglePlaces (2.1.0):
+    - GoogleMaps/Base (= 2.1.0)
   - GoogleSymbolUtilities (1.1.2)
   - GoogleUtilities (1.3.2):
     - GoogleSymbolUtilities (~> 1.1)
@@ -35,6 +42,8 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
+  - GoogleMaps
+  - GooglePlaces
 
 SPEC CHECKSUMS:
   Firebase: be473484f0d515e72ffd04acf22f981773c23e58
@@ -44,10 +53,12 @@ SPEC CHECKSUMS:
   FirebaseDatabase: 750a4a0fe18ef114318876fd654b2d9c671e0992
   FirebaseInstanceID: ba1e640935235e5fac39dfa816fe7660e72e1a8a
   GoogleInterchangeUtilities: d5bc4d88d5b661ab72f9d70c58d02ca8c27ad1f7
+  GoogleMaps: 06589b9a38097bce0cd6e90f0fd9b5e4b4a9344c
   GoogleNetworkingUtilities: 3edd3a8161347494f2da60ea0deddc8a472d94cb
+  GooglePlaces: 16e96266483b8010e9f275399403647978523c86
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleUtilities: 8bbc733218aad26306f9d4a253823986110e3358
 
-PODFILE CHECKSUM: c112246ca06d93c08515e4bb6c62a2bd2fe117e7
+PODFILE CHECKSUM: 435494eca79972aca54769e079eb99113e6d852e
 
 COCOAPODS: 1.1.0.rc.3

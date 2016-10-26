@@ -51,8 +51,6 @@ class ViewController: UIViewController {
     
     @IBAction func register(_ sender: AnyObject) {
         
-        
-        
         // create a user with email and password fields
         FIRAuth.auth()?.createUser(withEmail: email.text!, password: password.text! ) {
             (user, error) in
@@ -61,31 +59,20 @@ class ViewController: UIViewController {
                 print(error.debugDescription)
                 return
             }
-            
             print("created a user with email: \(user?.email)")
             self.email.text = ""
             self.password.text = ""
-            
-            
             // get current user that just registered
             FIRAuth.auth()?.addStateDidChangeListener { auth, user in
                 if let user = user {
-                    // User is signed in.
-                    // try to log user out
+                   
+                    // add the user who just registered to the database.
                     let userID = user.uid
                     let userKey = self.ref.child("Users").child(userID)
                     userKey.child("email").setValue(user.email)
-                    
                 }
-                
-                // redirect to the fucking profile page gg ez.
-                
             }
-            
-           
-           
         }
-        
     }
 
     override func viewDidLoad() {
