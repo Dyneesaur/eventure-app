@@ -52,6 +52,7 @@
                                 </state>
                                 <connections>
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="J7c-Ft-Zuu"/>
+                                    <segue destination="JID-hO-YOc" kind="show" id="ZOB-JV-9AL"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pi6-x2-jhL">
@@ -78,6 +79,63 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-79.200000000000003" y="138.98050974512745"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="dPy-jf-Y2f">
+            <objects>
+                <viewController id="JID-hO-YOc" customClass="MapViewController" customModule="eventureAppV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Zna-a0-OaS"/>
+                        <viewControllerLayoutGuide type="bottom" id="odg-fF-Vza"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="w4y-Eb-vAd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ujY-rS-kuV">
+                                <frame key="frameInset" height="80"/>
+                                <color key="backgroundColor" red="0.20727959409999999" green="0.50885552999999994" blue="0.47473185810000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="b5p-D8-7U4"/>
+                                </constraints>
+                                <color key="barTintColor" red="0.20613774960105144" green="0.49104221204188481" blue="0.44664874380469516" alpha="1" colorSpace="calibratedRGB"/>
+                                <items>
+                                    <navigationItem title="Enter Location" id="eFj-UQ-AA5"/>
+                                </items>
+                            </navigationBar>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V4x-lo-Vin">
+                                <frame key="frameInset" minY="80" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z24-wB-pNR">
+                                <frame key="frameInset" height="543"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="39b-7H-A4X" kind="embed" id="Qwr-qe-vP8"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uyX-po-h5d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="592.79999999999995" y="135.38230884557723"/>
+        </scene>
+        <!--Map Container View Controller-->
+        <scene sceneID="MfU-QJ-OMa">
+            <objects>
+                <viewController id="39b-7H-A4X" customClass="MapContainerViewController" customModule="eventureAppV2" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jiy-Ls-2fO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="543"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7fx-vf-NU5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="593" y="877"/>
         </scene>
     </scenes>
 </document>

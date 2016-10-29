@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Gloss
 import Alamofire
 
 class ViewController: UIViewController, NSURLConnectionDelegate {

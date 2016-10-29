@@ -12,8 +12,10 @@
 		761B37721DC32C09005891F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761B37701DC32C09005891F6 /* Main.storyboard */; };
 		761B37741DC32C09005891F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 761B37731DC32C09005891F6 /* Assets.xcassets */; };
 		761B37771DC32C09005891F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 761B37751DC32C09005891F6 /* LaunchScreen.storyboard */; };
-		7686E11B1DC4379D006995FA /* Gloss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7686E11A1DC4379D006995FA /* Gloss.framework */; };
-		76ECA8381DC525B000A4B946 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76952C4C1DC3F35900EB13DF /* Alamofire.framework */; };
+		76ECA83A1DC5336E00A4B946 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECA8391DC5336E00A4B946 /* MapViewController.swift */; };
+		76ECA83C1DC53CBF00A4B946 /* MapContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76ECA83B1DC53CBF00A4B946 /* MapContainerViewController.swift */; };
+		76ECA83D1DC53DFA00A4B946 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76952C4C1DC3F35900EB13DF /* Alamofire.framework */; };
+		76ECA83E1DC53E3100A4B946 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 761B37781DC32C09005891F6 /* Info.plist */; };
 		AA4935F7A0C68FAA435B6334 /* Pods_eventureAppV2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E72F1C5ACF6035B249799F6E /* Pods_eventureAppV2.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,6 +30,8 @@
 		7686E11A1DC4379D006995FA /* Gloss.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Gloss.framework; path = "../../../Library/Developer/Xcode/DerivedData/eventureAppV2-acqvwbjnfxstbnevlhutywpsbrfx/Build/Products/Debug-iphonesimulator/Gloss/Gloss.framework"; sourceTree = "<group>"; };
 		76952C4C1DC3F35900EB13DF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "../../../Library/Developer/Xcode/DerivedData/eventureAppV2-acqvwbjnfxstbnevlhutywpsbrfx/Build/Products/Debug-iphonesimulator/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
 		76952C4E1DC3F3F100EB13DF /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../../Library/Developer/Xcode/DerivedData/eventureAppV2-acqvwbjnfxstbnevlhutywpsbrfx/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
+		76ECA8391DC5336E00A4B946 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
+		76ECA83B1DC53CBF00A4B946 /* MapContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapContainerViewController.swift; sourceTree = "<group>"; };
 		90C696ACA1572E0CEE176145 /* Pods-eventureAppV2.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventureAppV2.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eventureAppV2/Pods-eventureAppV2.debug.xcconfig"; sourceTree = "<group>"; };
 		B564C5AEEAF8FBF5F6CD6772 /* Pods-eventureAppV2.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventureAppV2.release.xcconfig"; path = "Pods/Target Support Files/Pods-eventureAppV2/Pods-eventureAppV2.release.xcconfig"; sourceTree = "<group>"; };
 		E72F1C5ACF6035B249799F6E /* Pods_eventureAppV2.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eventureAppV2.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,8 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76ECA8381DC525B000A4B946 /* Alamofire.framework in Frameworks */,
-				7686E11B1DC4379D006995FA /* Gloss.framework in Frameworks */,
+				76ECA83D1DC53DFA00A4B946 /* Alamofire.framework in Frameworks */,
 				AA4935F7A0C68FAA435B6334 /* Pods_eventureAppV2.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -80,11 +83,13 @@
 			isa = PBXGroup;
 			children = (
 				761B376C1DC32C09005891F6 /* AppDelegate.swift */,
+				76ECA8391DC5336E00A4B946 /* MapViewController.swift */,
 				761B376E1DC32C09005891F6 /* ViewController.swift */,
 				761B37701DC32C09005891F6 /* Main.storyboard */,
 				761B37731DC32C09005891F6 /* Assets.xcassets */,
 				761B37751DC32C09005891F6 /* LaunchScreen.storyboard */,
 				761B37781DC32C09005891F6 /* Info.plist */,
+				76ECA83B1DC53CBF00A4B946 /* MapContainerViewController.swift */,
 			);
 			path = eventureAppV2;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76ECA83E1DC53E3100A4B946 /* Info.plist in Resources */,
 				761B37771DC32C09005891F6 /* LaunchScreen.storyboard in Resources */,
 				761B37741DC32C09005891F6 /* Assets.xcassets in Resources */,
 				761B37721DC32C09005891F6 /* Main.storyboard in Resources */,
@@ -223,6 +229,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				761B376F1DC32C09005891F6 /* ViewController.swift in Sources */,
+				76ECA83A1DC5336E00A4B946 /* MapViewController.swift in Sources */,
+				76ECA83C1DC53CBF00A4B946 /* MapContainerViewController.swift in Sources */,
 				761B376D1DC32C09005891F6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -348,7 +356,7 @@
 				DEVELOPMENT_TEAM = R5857M4T79;
 				INFOPLIST_FILE = eventureAppV2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eventure-appv2.com.eventureAppV2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eventure-appv2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -362,7 +370,7 @@
 				DEVELOPMENT_TEAM = R5857M4T79;
 				INFOPLIST_FILE = eventureAppV2/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.eventure-appv2.com.eventureAppV2";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.eventure-appv2";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
