@@ -72,21 +72,17 @@ def requires_auth(f):
 # implement REST resources
 class Event(Resource):
 
-    def __init__(self,title, desc, avatar,location, startDate, endDate, host):
-        self.title = title
-        self.desc = desc
-        self.avatar = avatar
-        self.location = location
-        self.startDate = startDate
-        self.endDate = endDate
-        self.host = host
-
 	# create a new event on the server
     @requires_auth
 	def post(self):
 
 		# access the JSON that the client provided
 		new_event = request.json
+        	new_event['location'] = request.get_json('location')
+        	new_event['startDate'] = request.get_json('startDate')
+        	new_event['endDate'] = request.get_json('endDate')
+        	new_event['description'] = request.get_json('description')
+        	new_event['avatar'] = request.get_json('avatar')
 
 
 		# creates a new collection for events
