@@ -14,7 +14,10 @@ import Firebase
 
 
 class MapContainerViewController: UIViewController {
+    
+    
 
+  
     override func viewDidAppear(_ animated: Bool) {
         
         let camera = GMSCameraPosition.camera(withLatitude: 40.7128, longitude: -74.0059, zoom: 13)

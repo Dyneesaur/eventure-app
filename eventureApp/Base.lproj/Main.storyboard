@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -100,17 +100,16 @@
                                                 <segue destination="BYZ-38-t0r" kind="show" id="GkI-gD-daS"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tNo-FQ-SG7"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="tNo-FQ-SG7">
+                                            <connections>
+                                                <segue destination="Lhf-Ni-9gs" kind="presentation" id="jIc-Fb-AmJ"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Puc-9D-gkJ">
-                                <frame key="frameInset" minY="64" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </searchBar>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWM-sT-J94">
-                                <frame key="frameInset" height="516" maxY="43"/>
+                                <frame key="frameInset" height="560" maxY="43"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="DBf-HL-tgw" kind="embed" id="YV3-yz-Zkx"/>
@@ -125,19 +124,78 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="searchBar" destination="Puc-9D-gkJ" id="tNI-fb-Vaa"/>
+                        <outlet property="searchDisplayController" destination="M6C-Yw-fVJ" id="3yi-Xn-0S5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AT-WT-Fv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="M6C-Yw-fVJ">
+                    <connections>
+                        <outlet property="delegate" destination="6Dd-sm-0vA" id="rZO-PQ-V9O"/>
+                        <outlet property="searchContentsController" destination="6Dd-sm-0vA" id="PnJ-6R-DGZ"/>
+                        <outlet property="searchResultsDataSource" destination="6Dd-sm-0vA" id="yBW-Ly-s4N"/>
+                        <outlet property="searchResultsDelegate" destination="6Dd-sm-0vA" id="wmc-Zg-KTz"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="948" y="139"/>
+            <point key="canvasLocation" x="948" y="138.98050974512745"/>
+        </scene>
+        <!--Search Events-->
+        <scene sceneID="Ehd-Ys-msj">
+            <objects>
+                <tableViewController id="dqS-Fb-9wz" customClass="SearchViewController" customModule="eventureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="OlE-SX-KYp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" textLabel="4Sw-Qh-ctd" style="IBUITableViewCellStyleDefault" id="l6z-WF-OGL">
+                                <rect key="frame" x="0.0" y="92" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="l6z-WF-OGL" id="FSL-h4-vT7">
+                                    <frame key="frameInset" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Sw-Qh-ctd">
+                                            <frame key="frameInset" minX="15" width="345" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dqS-Fb-9wz" id="Ny3-f0-6dI"/>
+                            <outlet property="delegate" destination="dqS-Fb-9wz" id="xLy-sH-U71"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Search Events" id="jcc-lH-h0C">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="cancel" id="LSJ-bP-ViO">
+                            <connections>
+                                <action selector="cancelSearch:" destination="dqS-Fb-9wz" id="o0i-gz-XD4"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="eventsTableView" destination="OlE-SX-KYp" id="EdJ-NT-DvL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1hS-AK-FcC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662" y="139"/>
         </scene>
         <!--Map Container View Controller-->
         <scene sceneID="0gC-Ca-AA5">
             <objects>
                 <viewController id="DBf-HL-tgw" customClass="MapContainerViewController" customModule="eventureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="STa-kB-c1H"/>
+                        <viewControllerLayoutGuide type="bottom" id="w7G-eY-ef4"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CWT-6i-aEk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="516"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="560"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -145,6 +203,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9HP-B6-5UL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-457" y="803"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="tKz-5M-KXn">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Lhf-Ni-9gs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sXd-ty-1M6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dqS-Fb-9wz" kind="relationship" relationship="rootViewController" id="NWs-Yl-6WQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aLp-pu-nTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1863" y="139"/>
         </scene>
     </scenes>
     <resources>

@@ -24,6 +24,7 @@
 		76A083C41DBC183E00DBC5A2 /* DBAccessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A083C31DBC183E00DBC5A2 /* DBAccessObject.swift */; };
 		76AA56C61DBC2B4A00EE90FF /* DBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA56C51DBC2B4A00EE90FF /* DBViewController.swift */; };
 		A7E6BD0BC443562A75605052 /* Pods_eventureApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFCB81741DB73DB7E88BF2A /* Pods_eventureApp.framework */; };
+		A953ECBE1DCA6CAF0043D652 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953ECBD1DCA6CAF0043D652 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		76A083C11DBC013700DBC5A2 /* LoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		76A083C31DBC183E00DBC5A2 /* DBAccessObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBAccessObject.swift; sourceTree = "<group>"; };
 		76AA56C51DBC2B4A00EE90FF /* DBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBViewController.swift; sourceTree = "<group>"; };
+		A953ECBD1DCA6CAF0043D652 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AB149FF1214CD90EBC2AFCA5 /* Pods-eventureApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventureApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-eventureApp/Pods-eventureApp.release.xcconfig"; sourceTree = "<group>"; };
 		AFFCB81741DB73DB7E88BF2A /* Pods_eventureApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eventureApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18A7FAFEA7F036E386AFFC7 /* Pods-eventureApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventureApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-eventureApp/Pods-eventureApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				76A083A81DBBF73B00DBC5A2 /* LaunchScreen.storyboard */,
 				76A083B21DBBF7E300DBC5A2 /* GoogleService-Info.plist */,
 				76A083AB1DBBF73B00DBC5A2 /* Info.plist */,
+				A953ECBD1DCA6CAF0043D652 /* SearchViewController.swift */,
 			);
 			path = eventureApp;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				7646BFBA1DC0570000CB7CF8 /* MapViewController.swift in Sources */,
 				765A7F441DCA4F64000C27EE /* MapContainerViewController.swift in Sources */,
 				76A083BD1DBBF9ED00DBC5A2 /* Message.swift in Sources */,
+				A953ECBE1DCA6CAF0043D652 /* SearchViewController.swift in Sources */,
 				76AA56C61DBC2B4A00EE90FF /* DBViewController.swift in Sources */,
 				76A083B71DBBF9DC00DBC5A2 /* Event.swift in Sources */,
 				76A083C21DBC013700DBC5A2 /* LoggedInViewController.swift in Sources */,
