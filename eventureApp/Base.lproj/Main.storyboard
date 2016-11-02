@@ -39,7 +39,7 @@
                                 <state key="normal" title="Log in"/>
                                 <connections>
                                     <action selector="login:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ieP-DD-Ck7"/>
-                                    <segue destination="4I8-F1-WhK" kind="show" id="Lud-ZR-Oe5"/>
+                                    <segue destination="6Dd-sm-0vA" kind="show" id="v3c-ak-4lV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Eventure App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOg-Px-04j">
@@ -54,7 +54,7 @@
                                 <state key="normal" title="Register"/>
                                 <connections>
                                     <action selector="register:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aaF-cJ-wZI"/>
-                                    <segue destination="4I8-F1-WhK" kind="show" id="WSh-dx-0Af"/>
+                                    <segue destination="6Dd-sm-0vA" kind="show" id="1Kg-2m-ulN"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -94,11 +94,13 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Enter Location" id="NAA-PF-rEe">
-                                        <barButtonItem key="leftBarButtonItem" title="Back" id="1q6-6b-WwN">
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="1q6-6b-WwN">
                                             <connections>
-                                                <segue destination="4I8-F1-WhK" kind="show" id="LAx-d9-Sa1"/>
+                                                <action selector="logout:" destination="6Dd-sm-0vA" id="rqI-SG-P0f"/>
+                                                <segue destination="BYZ-38-t0r" kind="show" id="GkI-gD-daS"/>
                                             </connections>
                                         </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="tNo-FQ-SG7"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -107,190 +109,66 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="duA-q3-HLt" customClass="GMSMapView">
-                                <frame key="frameInset" minY="108" width="375" height="559"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dWM-sT-J94">
+                                <frame key="frameInset" height="516" maxY="43"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="DBf-HL-tgw" kind="embed" id="YV3-yz-Zkx"/>
+                                </connections>
+                            </containerView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HDg-dx-Udn">
+                                <frame key="frameInset" height="44" maxY="-1"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items/>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="myMapView" destination="duA-q3-HLt" id="FyE-rp-3m4"/>
+                        <outlet property="searchBar" destination="Puc-9D-gkJ" id="tNI-fb-Vaa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AT-WT-Fv5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="156" y="926.98650674662679"/>
-        </scene>
-        <!--Logged In View Controller-->
-        <scene sceneID="iYm-YQ-XIr">
-            <objects>
-                <viewController id="4I8-F1-WhK" customClass="LoggedInViewController" customModule="eventureApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="dYs-gV-Nym"/>
-                        <viewControllerLayoutGuide type="bottom" id="goD-8i-BbY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="V60-yH-qzS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="b8Q-lM-CGG">
-                                <frame key="frameInset" minY="12" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Navigation Menu" id="7wk-u4-LcJ">
-                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="dix-gq-P4C">
-                                            <connections>
-                                                <action selector="logout:" destination="4I8-F1-WhK" id="2he-s6-UIQ"/>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="aSJ-sh-E0e"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="View DB" id="vPJ-3z-opz">
-                                            <connections>
-                                                <segue destination="hF2-eT-mQk" kind="show" id="Hno-l2-XBE"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Currently Signed in As" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyR-jJ-drB">
-                                <frame key="frameInset" minX="16" minY="323" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adF-TR-pmP">
-                                <frame key="frameInset" minX="151" minY="518" width="72" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show Map"/>
-                                <connections>
-                                    <segue destination="6Dd-sm-0vA" kind="show" id="RdA-G7-Ejy"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <connections>
-                        <outlet property="email" destination="gyR-jJ-drB" id="82N-fG-IQ2"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NMZ-AR-cSE" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="837.60000000000002" y="138.98050974512745"/>
+            <point key="canvasLocation" x="948" y="139"/>
         </scene>
         <!--View Controller-->
-        <scene sceneID="ZAw-V5-u4W">
+        <scene sceneID="Liw-ep-BNL">
             <objects>
-                <viewController id="hF2-eT-mQk" customClass="DBViewController" customModule="eventureApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QKC-1n-nng" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="fDh-FF-kfx"/>
-                        <viewControllerLayoutGuide type="bottom" id="WdT-Vj-N1B"/>
+                        <viewControllerLayoutGuide type="top" id="qo3-gH-G4z"/>
+                        <viewControllerLayoutGuide type="bottom" id="r1I-KN-uqB"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="U0K-82-TEz">
+                    <view key="view" contentMode="scaleToFill" id="cxB-rb-Ujh">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Database Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbq-NY-vIp">
-                                <frame key="frameInset" minX="16" minY="111" width="343" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fFC-hm-fm1">
-                                <frame key="frameInset" minY="20" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Navigation Bar" id="upE-wp-ZWO">
-                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="CzU-Po-0zv">
-                                            <connections>
-                                                <action selector="logout:" destination="hF2-eT-mQk" id="g1h-R5-oGU"/>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="NLZ-92-0MH"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Back" id="RM1-J4-O5K">
-                                            <connections>
-                                                <segue destination="4I8-F1-WhK" kind="show" id="Ne2-Eo-Qme"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6x0-kQ-fDI">
-                                <frame key="frameInset" minX="16" minY="186" width="175" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSb-bD-a75">
-                                <frame key="frameInset" minX="16" minY="238" width="175" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJH-HV-Mnl">
-                                <frame key="frameInset" minX="16" minY="288" width="175" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3SO-rf-rms">
-                                <frame key="frameInset" minX="16" minY="343" width="175" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3tY-jC-BHL">
-                                <frame key="frameInset" minX="150" minY="530" width="74" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Show Data"/>
-                                <connections>
-                                    <action selector="showDataTapped:" destination="hF2-eT-mQk" eventType="touchUpInside" id="QZi-Ja-PHn"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uh3-0A-z4W">
-                                <frame key="frameInset" minX="216" minY="186" width="159" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fes-kJ-Rgf">
-                                <frame key="frameInset" minX="216" minY="238" width="159" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <connections>
-                        <outlet property="category" destination="fes-kJ-Rgf" id="sWL-lI-OJD"/>
-                        <outlet property="chatChannel" destination="Uh3-0A-z4W" id="pTn-9b-lc0"/>
-                        <outlet property="dateCreated" destination="3SO-rf-rms" id="tLl-Zb-bxO"/>
-                        <outlet property="dbData" destination="U0K-82-TEz" id="Ugp-ux-ENH"/>
-                        <outlet property="descriptionData" destination="gSb-bD-a75" id="ZJ3-qT-CZn"/>
-                        <outlet property="image" destination="fJH-HV-Mnl" id="YyT-Uv-E5Z"/>
-                        <outlet property="titleData" destination="6x0-kQ-fDI" id="F7Q-YB-LMX"/>
-                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="e33-f4-3nb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xoi-TF-b5c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1541.5999999999999" y="138.98050974512745"/>
+            <point key="canvasLocation" x="1668" y="139"/>
+        </scene>
+        <!--Map Container View Controller-->
+        <scene sceneID="0gC-Ca-AA5">
+            <objects>
+                <viewController id="DBf-HL-tgw" customClass="MapContainerViewController" customModule="eventureApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CWT-6i-aEk">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="516"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9HP-B6-5UL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-457" y="803"/>
         </scene>
     </scenes>
     <resources>
         <image name="river.jpeg" width="5472" height="3648"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aSJ-sh-E0e"/>
-        <segue reference="LAx-d9-Sa1"/>
+        <segue reference="v3c-ak-4lV"/>
     </inferredMetricsTieBreakers>
 </document>

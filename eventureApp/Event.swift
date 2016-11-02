@@ -16,31 +16,27 @@ import Foundation
 class Event {
     
     // instance variables for initializer
-    let created: NSDate
+    let created: String
     let event_id: String
     var avatar_img: String
     let channelNum: Int
-    var start_date: NSDate        
-    var end_date: NSDate
-    var icon_img: String
+//    var icon_img: String
     var event_images: NSMutableArray
     var event_category: String
-    let host_id: String  // this will be firstbase uid
+//    let host_id: String  // this will be firstbase uid
     var title_text: String
     
     // define an initializer for Event objects
-    init(dateCreated: NSDate, eventID: String, avatar: String, chatChannelNumber: Int, startDate: NSDate, endDate: NSDate, icon: String, images: NSMutableArray, category: String, host: String, title: String) {
+    init(dateCreated: String, eventID: String, avatar: String, chatChannelNumber: Int, images: NSMutableArray, category: String, title: String) {
         
         self.created = dateCreated
         self.event_id = eventID
         self.avatar_img = avatar
         self.channelNum = chatChannelNumber
-        self.start_date = startDate
-        self.end_date = endDate
-        self.icon_img = icon
+//        self.icon_img = icon
         self.event_images = images
         self.event_category = category
-        self.host_id = host
+//        self.host_id = host
         self.title_text = title
         
     }
@@ -48,7 +44,7 @@ class Event {
     /****** define functions for the event class ******/
     
     // getter functions for an event object
-    func getDateCreated() -> NSDate {
+    func getDateCreated() -> String {
         // returns the date that the event was created
         return created
     }
@@ -63,20 +59,11 @@ class Event {
         return avatar_img
     }
     
-    func getStartDate() -> NSDate {
-        // returns the date the event is scheduled to start
-        return start_date
-    }
-    
-    func getEndDate() -> NSDate {
-        // returns the date that the event is scheduled to end
-        return end_date
-    }
-    
-    func getIconImage() -> String {
-        // returns a link to the images address on the internet
-        return icon_img
-    }
+//   
+//    func getIconImage() -> String {
+//        // returns a link to the images address on the internet
+//        return icon_img
+//    }
     
     func getEventImages() -> NSMutableArray {
         // returns an array of links to images taken at the event
@@ -85,12 +72,12 @@ class Event {
         return event_images
     }
     
-    func getHostID() -> String {
-        // return the user's host ID possibly could be a string or integer not sure
-        // for now it will be a string
-        return host_id
-    }
-    
+//    func getHostID() -> String {
+//        // return the user's host ID possibly could be a string or integer not sure
+//        // for now it will be a string
+//        return host_id
+//    }
+//    
     func getTitleText() -> String {
         // returns the title text of the event
         return title_text
@@ -103,25 +90,16 @@ class Event {
         avatar_img = imageLink
     }
     
-    func setStartDate(startDate: NSDate) {
-        // sets the start date for an event
-        start_date = startDate
-    }
-    
-    func setEndDate(endDate: NSDate) {
-        // sets the end date for an event
-        end_date = endDate
-    }
     
     func setEventCategroy(eventCategory: String) {
         // sets the event category for an event object
         event_category = eventCategory
     }
     
-    func setIconImage(iconImage: String) {
-        // sets the icon image for an event
-        icon_img = iconImage
-    }
+//    func setIconImage(iconImage: String) {
+//        // sets the icon image for an event
+//        icon_img = iconImage
+//    }
     
     // other functions
     

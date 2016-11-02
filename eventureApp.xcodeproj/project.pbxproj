@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7646BFBA1DC0570000CB7CF8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7646BFB91DC0570000CB7CF8 /* MapViewController.swift */; };
+		765A7F441DCA4F64000C27EE /* MapContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A7F431DCA4F64000C27EE /* MapContainerViewController.swift */; };
 		76A083A01DBBF73B00DBC5A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A0839F1DBBF73B00DBC5A2 /* AppDelegate.swift */; };
 		76A083A21DBBF73B00DBC5A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A083A11DBBF73B00DBC5A2 /* ViewController.swift */; };
 		76A083A51DBBF73B00DBC5A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 76A083A31DBBF73B00DBC5A2 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		7646BFB91DC0570000CB7CF8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		765A7F431DCA4F64000C27EE /* MapContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapContainerViewController.swift; sourceTree = "<group>"; };
 		76A0839C1DBBF73B00DBC5A2 /* eventureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eventureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		76A0839F1DBBF73B00DBC5A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		76A083A11DBBF73B00DBC5A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		765A7F451DCA59DE000C27EE /* Old Files */ = {
+			isa = PBXGroup;
+			children = (
+				76AA56C51DBC2B4A00EE90FF /* DBViewController.swift */,
+				76A083C11DBC013700DBC5A2 /* LoggedInViewController.swift */,
+			);
+			name = "Old Files";
+			sourceTree = "<group>";
+		};
 		76A083931DBBF73A00DBC5A2 = {
 			isa = PBXGroup;
 			children = (
@@ -90,20 +101,20 @@
 		76A0839E1DBBF73B00DBC5A2 /* eventureApp */ = {
 			isa = PBXGroup;
 			children = (
+				765A7F451DCA59DE000C27EE /* Old Files */,
 				76A083BE1DBBFA0400DBC5A2 /* Images */,
 				76A083B51DBBF9D000DBC5A2 /* Data Classes */,
 				76A083B41DBBF9C700DBC5A2 /* Utility Classes */,
 				76A083B11DBBF78C00DBC5A2 /* eventureApp.entitlements */,
 				76A0839F1DBBF73B00DBC5A2 /* AppDelegate.swift */,
 				76A083A11DBBF73B00DBC5A2 /* ViewController.swift */,
-				76A083C11DBC013700DBC5A2 /* LoggedInViewController.swift */,
+				7646BFB91DC0570000CB7CF8 /* MapViewController.swift */,
+				765A7F431DCA4F64000C27EE /* MapContainerViewController.swift */,
 				76A083A31DBBF73B00DBC5A2 /* Main.storyboard */,
-				76AA56C51DBC2B4A00EE90FF /* DBViewController.swift */,
 				76A083A61DBBF73B00DBC5A2 /* Assets.xcassets */,
 				76A083A81DBBF73B00DBC5A2 /* LaunchScreen.storyboard */,
 				76A083B21DBBF7E300DBC5A2 /* GoogleService-Info.plist */,
 				76A083AB1DBBF73B00DBC5A2 /* Info.plist */,
-				7646BFB91DC0570000CB7CF8 /* MapViewController.swift */,
 			);
 			path = eventureApp;
 			sourceTree = "<group>";
@@ -279,6 +290,7 @@
 				76A083BB1DBBF9E700DBC5A2 /* Chatroom.swift in Sources */,
 				76A083A21DBBF73B00DBC5A2 /* ViewController.swift in Sources */,
 				7646BFBA1DC0570000CB7CF8 /* MapViewController.swift in Sources */,
+				765A7F441DCA4F64000C27EE /* MapContainerViewController.swift in Sources */,
 				76A083BD1DBBF9ED00DBC5A2 /* Message.swift in Sources */,
 				76AA56C61DBC2B4A00EE90FF /* DBViewController.swift in Sources */,
 				76A083B71DBBF9DC00DBC5A2 /* Event.swift in Sources */,

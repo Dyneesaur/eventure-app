@@ -8,28 +8,40 @@
 
 import UIKit
 import GoogleMaps
+import Firebase
+import FirebaseAuth
 
 class MapViewController: UIViewController {
 
 
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var myMapView: GMSMapView!
     
+    @IBAction func logout(_ sender: AnyObject) {
+        
+        // log the currently signed in user out.
+        FIRAuth.auth()?.addStateDidChangeListener { auth, user in
+            if let user = user {
+                // User is signed in.
+                // try to log user out
+                do {
+                    try FIRAuth.auth()?.signOut()
+                }
+                catch {
+                    print("Error while signing out")
+                }
+                
+            } else {
+                // No user is signed in.
+            }
+        }
+        
+    }
     
     override func viewDidLoad() {
         
-        let camera = GMSCameraPosition.camera(withLatitude: 40.7128, longitude: -74.0059, zoom: 13)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
-        mapView.isMyLocationEnabled = true
-        myMapView = mapView
         
-        
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: 40.7128, longitude: -74.0059)
-        marker.title = "New York"
-        marker.snippet = "United States"
-        marker.map = myMapView
         
     }
 }
