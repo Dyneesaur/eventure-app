@@ -10,6 +10,7 @@ import UIKit
 import GoogleMaps
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class MapViewController: UIViewController {
 
@@ -40,6 +41,7 @@ class MapViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
         
         
         
