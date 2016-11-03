@@ -16,6 +16,7 @@ import Firebase
 class MapContainerViewController: UIViewController {
     
     
+    
 
   
     override func viewDidAppear(_ animated: Bool) {
@@ -80,11 +81,13 @@ class MapContainerViewController: UIViewController {
                             newMarker.map = mapView
                             
                             
+                            
                         }
                     }
                     
                     
-                    
+                    longArr = []
+                    latArr = []
                     
                     
                     
