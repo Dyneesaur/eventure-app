@@ -10,13 +10,16 @@ import UIKit
 import FirebaseDatabase
 
 class SearchViewController: UITableViewController, UISearchResultsUpdating {
+    
+    //THERE ARE IMPORTANT FUNCTIONS AT THE BOTTOM!
 
     @IBOutlet var eventsTableView: UITableView!
     
+     //Creates the search bar object
      //Can fill "nil" in with a seperate viewcontroller if wanted.
     let searchController = UISearchController(searchResultsController: nil)
    
-    
+    //These arrays are were the firebase objects are stored for viewing/searching
     var eventsArray = [NSDictionary?]()
     var filteredEvents = [NSDictionary?]()
     
@@ -32,8 +35,10 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
         definesPresentationContext = true
         tableView.tableHeaderView = searchController.searchBar
         
+        //This querys the firebase database for all events ordered by Title
         ref.child("Events").queryOrdered(byChild: "title").observe(.childAdded, with: {(snapshot) in
         
+            //Inserts each firebase object into an array so we can access them locally
             self.eventsArray.append(snapshot.value as? NSDictionary)
             
             //insert the rows
@@ -67,6 +72,7 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         
+        //This allows the search bar to refresh the results instantly
         if searchController.isActive && searchController.searchBar.text != "" {
             return filteredEvents.count
         }
@@ -75,7 +81,7 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
         return self.eventsArray.count
     }
 
-    
+    //Creates the table view and creates a row for each object in the events array
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
@@ -138,16 +144,21 @@ class SearchViewController: UITableViewController, UISearchResultsUpdating {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //Just a simple cancel button so the user can get out of the search viewcontroller
     @IBAction func cancelSearch(_ sender: AnyObject) {
         dismiss(animated: true, completion: nil)
     }
     
-    
+    //Calls the function below (filterContent) to keep updating the table with 
+    //newly filtered content.
     func updateSearchResults(for searchController: UISearchController) {
         //update the search results
         filterContent(searchText: self.searchController.searchBar.text!)
     }
     
+    //This is the function that actually does the string comparison for the 
+    //user entered text and the events text.
     func filterContent(searchText: String) {
         self.filteredEvents = self.eventsArray.filter{ event in
             
