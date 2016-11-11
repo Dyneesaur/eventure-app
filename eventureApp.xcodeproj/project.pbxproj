@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7620C0EE1DD66D6100D594E9 /* recreation.png in Resources */ = {isa = PBXBuildFile; fileRef = 7620C0ED1DD66D6100D594E9 /* recreation.png */; };
+		7620C0F01DD66D7000D594E9 /* business.png in Resources */ = {isa = PBXBuildFile; fileRef = 7620C0EF1DD66D7000D594E9 /* business.png */; };
+		7620C0F21DD66D8400D594E9 /* food.png in Resources */ = {isa = PBXBuildFile; fileRef = 7620C0F11DD66D8400D594E9 /* food.png */; };
+		7620C0F61DD66E0600D594E9 /* charitables.png in Resources */ = {isa = PBXBuildFile; fileRef = 7620C0F51DD66E0600D594E9 /* charitables.png */; };
 		7646BFBA1DC0570000CB7CF8 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7646BFB91DC0570000CB7CF8 /* MapViewController.swift */; };
 		765A7F441DCA4F64000C27EE /* MapContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A7F431DCA4F64000C27EE /* MapContainerViewController.swift */; };
 		765A7F471DCAC222000C27EE /* AddEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 765A7F461DCAC222000C27EE /* AddEventViewController.swift */; };
@@ -29,6 +33,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7620C0ED1DD66D6100D594E9 /* recreation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = recreation.png; sourceTree = "<group>"; };
+		7620C0EF1DD66D7000D594E9 /* business.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = business.png; sourceTree = "<group>"; };
+		7620C0F11DD66D8400D594E9 /* food.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = food.png; sourceTree = "<group>"; };
+		7620C0F51DD66E0600D594E9 /* charitables.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = charitables.png; sourceTree = "<group>"; };
 		7646BFB91DC0570000CB7CF8 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		765A7F431DCA4F64000C27EE /* MapContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapContainerViewController.swift; sourceTree = "<group>"; };
 		765A7F461DCAC222000C27EE /* AddEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEventViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +129,10 @@
 				76A083AB1DBBF73B00DBC5A2 /* Info.plist */,
 				A953ECBD1DCA6CAF0043D652 /* SearchViewController.swift */,
 				765A7F461DCAC222000C27EE /* AddEventViewController.swift */,
+				7620C0ED1DD66D6100D594E9 /* recreation.png */,
+				7620C0F51DD66E0600D594E9 /* charitables.png */,
+				7620C0F11DD66D8400D594E9 /* food.png */,
+				7620C0EF1DD66D7000D594E9 /* business.png */,
 			);
 			path = eventureApp;
 			sourceTree = "<group>";
@@ -232,8 +244,12 @@
 				76A083B31DBBF7E300DBC5A2 /* GoogleService-Info.plist in Resources */,
 				76A083AA1DBBF73B00DBC5A2 /* LaunchScreen.storyboard in Resources */,
 				76A083A71DBBF73B00DBC5A2 /* Assets.xcassets in Resources */,
+				7620C0F21DD66D8400D594E9 /* food.png in Resources */,
 				76A083C01DBBFA0B00DBC5A2 /* river.jpeg in Resources */,
 				76A083A51DBBF73B00DBC5A2 /* Main.storyboard in Resources */,
+				7620C0F01DD66D7000D594E9 /* business.png in Resources */,
+				7620C0EE1DD66D6100D594E9 /* recreation.png in Resources */,
+				7620C0F61DD66E0600D594E9 /* charitables.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -60,6 +60,29 @@ class MapContainerViewController: UIViewController {
                             let newMarker = GMSMarker()
                             newMarker.position = CLLocationCoordinate2D(latitude: longitude, longitude: latitude)
                             
+                            
+                            // store the event's icon type
+                            let category = value?["category"] as! String
+                            
+                            // set a custom icon for the event.
+                            if category == "Recreational" {
+                                // set the icon image to recreation.png
+                                newMarker.icon = UIImage(named: "recreation.png")
+                            }
+                            
+                            if category == "Business" {
+                                // set the icon image to business.png
+                                newMarker.icon = UIImage(named: "business.png")
+                            }
+                            if category == "Food/Drink" {
+                                // set the icon image to food.png
+                                newMarker.icon = UIImage(named: "food.png")
+                            }
+                            if category == "Charitable" {
+                                // set the icon image to charitable.png
+                                newMarker.icon = UIImage(named: "charitables.png")
+                            }
+                            
                             // set the title and description of the event.
                             newMarker.title = eventTitle
                             newMarker.snippet = eventDesc
