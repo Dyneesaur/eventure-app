@@ -22,7 +22,7 @@ class MapViewController: UIViewController {
     
     @IBAction func addEvent(_ sender: AnyObject) {
         
-        UIView.animate(withDuration: 2) {
+        UIView.animate(withDuration: 1) {
             self.AddEventView.center = CGPoint(x: self.AddEventView.center.x + 500,y: self.AddEventView.center.y)
             
         }
@@ -38,7 +38,7 @@ class MapViewController: UIViewController {
     @IBAction func back(_ sender: AnyObject) {
         
         
-        UIView.animate(withDuration: 2) {
+        UIView.animate(withDuration: 1) {
             self.AddEventView.center = CGPoint(x: self.AddEventView.center.x - 500,y: self.AddEventView.center.y)
         }
         

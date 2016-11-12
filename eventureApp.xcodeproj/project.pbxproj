@@ -445,6 +445,7 @@
 				CODE_SIGN_ENTITLEMENTS = eventureApp/eventureApp.entitlements;
 				DEVELOPMENT_TEAM = R5857M4T79;
 				INFOPLIST_FILE = eventureApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eventure-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -460,6 +461,7 @@
 				CODE_SIGN_ENTITLEMENTS = eventureApp/eventureApp.entitlements;
 				DEVELOPMENT_TEAM = R5857M4T79;
 				INFOPLIST_FILE = eventureApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.eventure-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
