@@ -20,6 +20,12 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var myMapView: GMSMapView!
     
+    
+    @IBAction func goToChat(_ sender: AnyObject) {
+        
+    }
+    
+    
     @IBAction func addEvent(_ sender: AnyObject) {
         
         UIView.animate(withDuration: 1) {

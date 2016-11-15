@@ -14,15 +14,17 @@ import Firebase
 
 
 class MapContainerViewController: UIViewController {
-    
+
     
     override func viewDidLoad() {
-
+        
         // set the orientation and view of the map.
-        let camera = GMSCameraPosition.camera(withLatitude: 40.7128, longitude: -74.0059, zoom: 13)
-        let mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
+        var camera = GMSCameraPosition.camera(withLatitude: 40.7128, longitude: -74.0059, zoom: 13)
+        var mapView = GMSMapView.map(withFrame: CGRect.zero, camera: camera)
         mapView.isMyLocationEnabled = true
+    
         self.view = mapView
+    
         
         // reference to firebase database.
         var ref: FIRDatabaseReference!
