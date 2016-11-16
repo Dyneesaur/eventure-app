@@ -255,7 +255,7 @@
 				TargetAttributes = {
 					76A0839B1DBBF73A00DBC5A2 = {
 						CreatedOnToolsVersion = 8.0;
-						DevelopmentTeam = 84NMY7WN6T;
+						DevelopmentTeam = R5857M4T79;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.Keychain = {
@@ -497,7 +497,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = eventureApp/eventureApp.entitlements;
-				DEVELOPMENT_TEAM = 84NMY7WN6T;
+				DEVELOPMENT_TEAM = R5857M4T79;
 				INFOPLIST_FILE = eventureApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -513,7 +513,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = eventureApp/eventureApp.entitlements;
-				DEVELOPMENT_TEAM = 84NMY7WN6T;
+				DEVELOPMENT_TEAM = R5857M4T79;
 				INFOPLIST_FILE = eventureApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
