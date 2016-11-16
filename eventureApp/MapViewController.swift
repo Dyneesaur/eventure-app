@@ -58,7 +58,7 @@ class MapViewController: UIViewController {
                 // User is signed in.
                 // try to log user out
                 do {
-                    try FIRAuth.auth()?.signOut()
+                    try! FIRAuth.auth()!.signOut()
                 }
                 catch {
                     print("Error while signing out")

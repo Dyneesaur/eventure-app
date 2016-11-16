@@ -32,6 +32,8 @@
 		76A083C41DBC183E00DBC5A2 /* DBAccessObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76A083C31DBC183E00DBC5A2 /* DBAccessObject.swift */; };
 		76AA56C61DBC2B4A00EE90FF /* DBViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76AA56C51DBC2B4A00EE90FF /* DBViewController.swift */; };
 		A7E6BD0BC443562A75605052 /* Pods_eventureApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFCB81741DB73DB7E88BF2A /* Pods_eventureApp.framework */; };
+		A938EE5A1DDBF334006A51F5 /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938EE591DDBF334006A51F5 /* SearchCell.swift */; };
+		A938EE5C1DDBF46A006A51F5 /* EventsProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A938EE5B1DDBF46A006A51F5 /* EventsProfileViewController.swift */; };
 		A953ECBE1DCA6CAF0043D652 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A953ECBD1DCA6CAF0043D652 /* SearchViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		76A083C11DBC013700DBC5A2 /* LoggedInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInViewController.swift; sourceTree = "<group>"; };
 		76A083C31DBC183E00DBC5A2 /* DBAccessObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBAccessObject.swift; sourceTree = "<group>"; };
 		76AA56C51DBC2B4A00EE90FF /* DBViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBViewController.swift; sourceTree = "<group>"; };
+		A938EE591DDBF334006A51F5 /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
+		A938EE5B1DDBF46A006A51F5 /* EventsProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsProfileViewController.swift; sourceTree = "<group>"; };
 		A953ECBD1DCA6CAF0043D652 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		AB149FF1214CD90EBC2AFCA5 /* Pods-eventureApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eventureApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-eventureApp/Pods-eventureApp.release.xcconfig"; sourceTree = "<group>"; };
 		AFFCB81741DB73DB7E88BF2A /* Pods_eventureApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eventureApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -174,6 +178,8 @@
 				7620C0F51DD66E0600D594E9 /* charitables.png */,
 				7620C0F11DD66D8400D594E9 /* food.png */,
 				7620C0EF1DD66D7000D594E9 /* business.png */,
+				A938EE591DDBF334006A51F5 /* SearchCell.swift */,
+				A938EE5B1DDBF46A006A51F5 /* EventsProfileViewController.swift */,
 			);
 			path = eventureApp;
 			sourceTree = "<group>";
@@ -353,7 +359,9 @@
 				3C9F39E21DDC21E000804A55 /* Channel.swift in Sources */,
 				765A7F471DCAC222000C27EE /* AddEventViewController.swift in Sources */,
 				76A083BB1DBBF9E700DBC5A2 /* Chatroom.swift in Sources */,
+				A938EE5A1DDBF334006A51F5 /* SearchCell.swift in Sources */,
 				76A083A21DBBF73B00DBC5A2 /* ViewController.swift in Sources */,
+				A938EE5C1DDBF46A006A51F5 /* EventsProfileViewController.swift in Sources */,
 				7646BFBA1DC0570000CB7CF8 /* MapViewController.swift in Sources */,
 				765A7F441DCA4F64000C27EE /* MapContainerViewController.swift in Sources */,
 				76A083BD1DBBF9ED00DBC5A2 /* Message.swift in Sources */,

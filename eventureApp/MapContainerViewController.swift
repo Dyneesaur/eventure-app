@@ -56,7 +56,7 @@ class MapContainerViewController: UIViewController {
                         // if both arrays have the key don't add to map
                         if eventArray.contains(event_key as! String) && alreadyAddedArray.contains(event_key as! String) {
                             
-                            
+                            // do nothing
                             
                         }
                             
