@@ -127,6 +127,39 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		761BA20E1DDCFCAC006311CC /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				7620C0ED1DD66D6100D594E9 /* recreation.png */,
+				7620C0F51DD66E0600D594E9 /* charitables.png */,
+				7620C0F11DD66D8400D594E9 /* food.png */,
+				7620C0EF1DD66D7000D594E9 /* business.png */,
+				76A0839D1DBBF73B00DBC5A2 /* Products */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		761BA20F1DDCFCC8006311CC /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				76A083A11DBBF73B00DBC5A2 /* ViewController.swift */,
+				765A7F431DCA4F64000C27EE /* MapContainerViewController.swift */,
+				7646BFB91DC0570000CB7CF8 /* MapViewController.swift */,
+				765A7F461DCAC222000C27EE /* AddEventViewController.swift */,
+				A938EE5B1DDBF46A006A51F5 /* EventsProfileViewController.swift */,
+				A953ECBD1DCA6CAF0043D652 /* SearchViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		761BA2101DDCFCE6006311CC /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A938EE591DDBF334006A51F5 /* SearchCell.swift */,
+			);
+			name = "Table Cells";
+			sourceTree = "<group>";
+		};
 		765A7F451DCA59DE000C27EE /* Old Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				76A0839E1DBBF73B00DBC5A2 /* eventureApp */,
-				76A0839D1DBBF73B00DBC5A2 /* Products */,
 				E205764F24D2A8D05B1DBF55 /* Pods */,
 				456A253AEC7C10E4DC50E316 /* Frameworks */,
 			);
@@ -152,34 +184,27 @@
 				76A0839C1DBBF73B00DBC5A2 /* eventureApp.app */,
 			);
 			name = Products;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		76A0839E1DBBF73B00DBC5A2 /* eventureApp */ = {
 			isa = PBXGroup;
 			children = (
+				76A083A31DBBF73B00DBC5A2 /* Main.storyboard */,
+				3C9F39D91DDC209400804A55 /* Chat */,
+				761BA2101DDCFCE6006311CC /* Table Cells */,
+				761BA20F1DDCFCC8006311CC /* ViewControllers */,
+				761BA20E1DDCFCAC006311CC /* Images */,
 				765A7F451DCA59DE000C27EE /* Old Files */,
 				76A083BE1DBBFA0400DBC5A2 /* Images */,
 				76A083B51DBBF9D000DBC5A2 /* Data Classes */,
 				76A083B41DBBF9C700DBC5A2 /* Utility Classes */,
 				76A083B11DBBF78C00DBC5A2 /* eventureApp.entitlements */,
 				76A0839F1DBBF73B00DBC5A2 /* AppDelegate.swift */,
-				76A083A11DBBF73B00DBC5A2 /* ViewController.swift */,
-				7646BFB91DC0570000CB7CF8 /* MapViewController.swift */,
-				3C9F39D91DDC209400804A55 /* Chat */,
-				765A7F431DCA4F64000C27EE /* MapContainerViewController.swift */,
-				76A083A31DBBF73B00DBC5A2 /* Main.storyboard */,
 				76A083A61DBBF73B00DBC5A2 /* Assets.xcassets */,
 				76A083A81DBBF73B00DBC5A2 /* LaunchScreen.storyboard */,
 				76A083B21DBBF7E300DBC5A2 /* GoogleService-Info.plist */,
 				76A083AB1DBBF73B00DBC5A2 /* Info.plist */,
-				A953ECBD1DCA6CAF0043D652 /* SearchViewController.swift */,
-				765A7F461DCAC222000C27EE /* AddEventViewController.swift */,
-				7620C0ED1DD66D6100D594E9 /* recreation.png */,
-				7620C0F51DD66E0600D594E9 /* charitables.png */,
-				7620C0F11DD66D8400D594E9 /* food.png */,
-				7620C0EF1DD66D7000D594E9 /* business.png */,
-				A938EE591DDBF334006A51F5 /* SearchCell.swift */,
-				A938EE5B1DDBF46A006A51F5 /* EventsProfileViewController.swift */,
 			);
 			path = eventureApp;
 			sourceTree = "<group>";
