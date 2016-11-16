@@ -427,6 +427,14 @@
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Create!"/>
                                         </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvH-HC-SpG">
+                                            <rect key="frame" x="221" y="6" width="34" height="30"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Back"/>
+                                            <connections>
+                                                <segue destination="6Dd-sm-0vA" kind="show" id="MiK-mR-MXW"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -443,6 +451,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="v3c-ak-4lV"/>
+        <segue reference="MiK-mR-MXW"/>
     </inferredMetricsTieBreakers>
 </document>
