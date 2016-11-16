@@ -148,6 +148,8 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="1cz-e5-PiW"/>
+                                    <barButtonItem title="Profile" id="9Va-NJ-Lqe"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="SfO-Wk-Zjs"/>
                                     <barButtonItem title="Back" id="6TT-fP-qTa">
                                         <color key="tintColor" red="0.99779379680000002" green="1" blue="0.97807503929999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -155,6 +157,7 @@
                                         </connections>
                                     </barButtonItem>
                                 </items>
+                                <color key="tintColor" red="1" green="0.98545754350314196" blue="0.99159126542041709" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="barTintColor" red="1" green="0.39039140490000002" blue="0.30330561360000002" alpha="1" colorSpace="calibratedRGB"/>
                             </toolbar>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cCf-XF-kS6">
